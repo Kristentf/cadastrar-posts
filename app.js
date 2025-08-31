@@ -2,9 +2,6 @@ const express = require("express");
 const app = express();
 const exphbs = require("express-handlebars")
 const {Sequelize} = require('sequelize')
-const bodyparser = require('body-parser');
-const { FORCE } = require("sequelize/lib/index-hints");
-
 
 // Config
     // Template engine
