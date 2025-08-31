@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const exphbs = require("express-handlebars")
-const {Sequelize} = require('sequelize')
 
 // Config
     // Template engine
@@ -9,15 +8,7 @@ const {Sequelize} = require('sequelize')
     app.set('view engine', 'handlebars')
     app.use(express.urlencoded({extended:true}))
     app.use(express.json())
-    // 
     
-    
-    // Conexão com o banco de dados  
-    sequelize = new Sequelize('nomes_test','root', '1234',{
-        host: 'localhost',
-        dialect: 'mysql',
-    });
-
 // Rotas
     // Rota GET
     app.get('/',(req,res)=>{
